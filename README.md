@@ -1,7 +1,7 @@
 x32-proxy
 --------
 
-* Proxy server for Behringer X32/Midas M32 series mixing consoles' remote control OSC commands over IPv4 and IPv6 networks, such as VPNs *
+*Proxy server for Behringer X32/Midas M32 series mixing consoles' remote control OSC commands over IPv4 and IPv6 networks, such as VPNs*
 
 # Installation
 
@@ -83,4 +83,4 @@ See license in LICENSE file.
 
 This project is not associated with Behringer, Midas, MUSIC Group, or any of those folks.  Please do not contact them for support for this tool.
 
-Copyright © 2018, AudioPump, Inc.
+Copyright Â© 2018, AudioPump, Inc.

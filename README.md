@@ -55,6 +55,7 @@ By default, the proxy will rewrite the upstream console address in `/status` and
 Unfortunately, the X32/M32 consoles don't support IPv6, and [probably never will](https://forum.musictribe.com/showthread.php?17399-IPv6-Support-for-OSC-Control).  Even more unfortunate is that the standard X32-Edit application is hardcoded to only use IPv4 addresses.  It doesn't even support hostnames.  What are you to do if you must access your X32 over an IPv6-only VPN?  You can run this proxy utility on two sides of it.
 
 Example Address:
+
  - X32 LAN: `192.0.2.1`
  - PC1 LAN: `192.0.2.5`
  - PC1 VPN: `2001:0db8::19aa:5035`

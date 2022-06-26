@@ -84,4 +84,4 @@ See license in LICENSE file.
 
 This project is not associated with Behringer, Midas, MUSIC Group, or any of those folks.  Please do not contact them for support for this tool.
 
-Copyright © 2018, AudioPump, Inc.
+Copyright © 2022 AudioPump, Inc.

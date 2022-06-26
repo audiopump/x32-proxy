@@ -5,7 +5,6 @@ const Client = require('./lib/Client');
 const dgram = require('dgram');
 const net = require('net');
 const packageInfo = require('./package.json');
-const throttle = require('just-throttle');
 const yargs = require('yargs');
 
 function formatAddressPort(address, port) {

@@ -20,5 +20,9 @@
     "console.table": "^0.10.0",
     "ws": "^8.8.1",
     "yargs": "^17.5.1"
-  }
+  },
+  "files": [
+    "/index.js",
+    "/lib"
+  ]
 }

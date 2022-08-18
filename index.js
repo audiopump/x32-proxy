@@ -46,8 +46,8 @@ function output() {
       type: client.type,
       address: client.downstreamAddress,
       port: client.downstreamPort,
-      'packets-rx': client.downstreamPacketCount.toLocaleString(),
       'packets-tx': client.upstreamPacketCount.toLocaleString(),
+      'packets-rx': client.downstreamPacketCount.toLocaleString()
     }
   });
 

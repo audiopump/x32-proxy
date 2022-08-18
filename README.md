@@ -38,15 +38,14 @@ For example, suppose your X32/M32 mixer has an IP address of `192.0.2.20`.  Also
 x32-proxy --udp 203.0.113.10 --target 192.0.2.20
 ```
 
-Once running, VPN users should be able to access the mixer using their normal X32/M32 OSC clients (such as X32-Edit) on `203.0.113.10`.
-
+Once running, VPN users should be able to access the mixer using their normal X32/M32 OSC clients (such as X32 Edit) on `203.0.113.10`.
 
 
 ## Options
 
 ### `--target <address[:port]>` (required)
 
-Specifies the address of the mixer to connect to.  Port defaults to `10023`, which is used for the X32/M32 series mixers.  If you are using the X-Air/MR series mixers, you should specify port `10024`.
+Specifies the address of the mixer to connect to.  Port defaults to `10023`, which is used for the X32/M32 series mixers.  If you are using the XR/MR series mixers, you should specify port `10024`.
 
 ### `--udp [bind address[:port]]`
 
@@ -88,18 +87,18 @@ You may specify `--ws` multiple times to listen on multiple interfaces and/or po
 Shows all the options and usage.
 
 ### `--name <name>`
-You may want to rewrite the display name of the upstream mixer for clients to display in their setup dialog.  This option allows specifying the name.
+You may want to rewrite the display name of the upstream mixer for clients to display in their setup dialog.  This option allows specifying the name.  (Requires status rewrite to be left enabled.)
 
 ## Advanced Options
 
 ### `--disable-status-rewrite`
-By default, the proxy will rewrite the upstream console address in `/status` and `/xinfo` packets.  This flag disables that functionality.
+By default, the proxy will rewrite the upstream console address in `/status` and `/xinfo` packets.  This flag disables that functionality.  (Conflicts with `--name` option.)
 
 ### `--udp-client-timeout <timeout in ms>`
 If the proxy hasn't heard from the client in awhile (5 seconds by default), it will remove them from the list of active clients and will close the socket that the X32 would normally respond on.  You can adjust this timeout if you wish.  There should be no practical reason to change this.  If a client is assumed inactive, its upstream socket is closed.  A new one will be reopened immediately if a new packet is received from the client.
 
-## Example: IPv6 VPN with stock X32-Edit
-Unfortunately, the X32/M32 consoles don't support IPv6, and [probably never will](https://community.musictribe.com/discussions/89151/166716/ipv6-support-for-osc-control).  Even more unfortunate is that the standard X32 Edit application is hardcoded to only use IPv4 addresses.  It doesn't even support hostnames.  What are you to do if you must access your X32 over an IPv6-only VPN?  You can run this proxy utility on two sides of it.
+## Example: IPv6 VPN with stock X32 Edit
+Unfortunately, the mixers don't support IPv6, and [probably never will](https://community.musictribe.com/discussions/89151/166716/ipv6-support-for-osc-control).  Even more unfortunate is that the standard X32 Edit/X-Air Edit applications are hardcoded to only use IPv4 addresses.  They doesn't even support hostnames.  What are you to do if you must access your mixer over an IPv6-only VPN?  You can run this proxy utility on two sides of it.
 
 Example Address:
 
@@ -120,7 +119,7 @@ On PC2, run the following:
 x32-proxy --udp --target [2001:0db8::19aa]:5035
 ```
 
-Now, on PC2, you can open your software and connect to `127.0.0.1` with X32-Edit as if you were directly connected to the console.
+Now, on PC2, you can open your software and connect to `127.0.0.1` with X32 Edit as if you were directly connected to the console.
 
 
 # Security

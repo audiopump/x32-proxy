@@ -14,14 +14,6 @@ function formatAddressPort(address, port) {
   return `${address}:${port}`;
 }
 
-const [target, targetPort] = (() => {
-  const url = new URL(`fake-protocol://${argv.target}`);
-  return [
-    url.hostname,
-    url.port || 10023
-  ]
-})();
-
 // Console output loop
 let outputTimeout;
 function output() {
@@ -30,7 +22,7 @@ function output() {
 
   // Header
   console.log(`${packageInfo.name} v${packageInfo.version} -- ${packageInfo.copyright}`);
-  console.log(`Target X32: ${formatAddressPort(target, targetPort)}`);
+  console.log(`Target X32: ${formatAddressPort(argv.target, argv.targetPort)}`);
 
   for (const server of servers) {
     if (server.listening) {
@@ -73,9 +65,9 @@ for (const type of ['udp', 'ws']) {
     const url = new URL(`fake-protocol://${host || '127.0.0.1'}`);
     servers.add(
       new (type === 'ws' ? WsServer : UdpServer)({
-        target: target,
-        targetPort: targetPort,
-        port: url.port || (type === 'udp' ? targetPort : 8080),
+        target: argv.target,
+        targetPort: argv.targetPort,
+        port: url.port || (type === 'udp' ? argv.targetPort : 8080),
         address: url.hostname
       })
     );

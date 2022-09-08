@@ -94,6 +94,9 @@ You may want to rewrite the display name of the upstream mixer for clients to di
 ### `--disable-status-rewrite`
 By default, the proxy will rewrite the upstream console address in `/status` and `/xinfo` packets.  This flag disables that functionality.  (Conflicts with `--name` option.)
 
+### `--disable-subscription-pool`
+The proxy will combine requests for `/xremote` and `/meter` subscriptions, when possible.  This will reduce load on the mixer, enabling more simultaneous clients.  You can disable this feature with this flag.
+
 ### `--udp-client-timeout <timeout in ms>`
 If the proxy hasn't heard from the client in awhile (5 seconds by default), it will remove them from the list of active clients and will close the socket that the X32 would normally respond on.  You can adjust this timeout if you wish.  There should be no practical reason to change this.  If a client is assumed inactive, its upstream socket is closed.  A new one will be reopened immediately if a new packet is received from the client.
 

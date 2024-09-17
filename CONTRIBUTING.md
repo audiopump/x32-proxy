@@ -5,7 +5,7 @@ Thank you for your interest in contributing to the project!
 
 Please submit your changes via a GitHub Pull Request for review.  For large changes, or changes that break backwards compatibility, please consider adding an issue to the tracker first for discussion.
 
-All contributors must agree to the Contributor License Agreement below before contributions will be accepted.  Please affirm in your pull request message that you agree to the CLA.  Alternatively, you can e-mail support@audiopump.co.  Your affirmation serves as your digital signature to the agreement.
+All contributors must agree to the Contributor License Agreement below before contributions will be accepted.  Please affirm in your pull request message that you agree to the CLA.  Alternatively, you can e-mail opensource@audiopump.co.  Your affirmation serves as your digital signature to the agreement.
 
 # Contributor License Agreement
 
@@ -33,11 +33,11 @@ You represent that you are legally entitled to grant the above license. If your 
 
 ## Original Creation
 
-You represent that each of Your Contributions is Your original creation (see section 7 for submissions on behalf of others). You represent that Your Contribution submissions include complete details of any third-party license or other restriction (including, but not limited to, related patents and trademarks) of which you are personally aware and which are associated with any part of Your Contributions.
+You represent that each of Your Contributions is Your original creation (see section 'upstream works' for submissions on behalf of others). You represent that Your Contribution submissions include complete details of any third-party license or other restriction (including, but not limited to, related patents and trademarks) of which you are personally aware and which are associated with any part of Your Contributions.
 
 ## As-Is
 
-You are not expected to provide support for Your Contributions, except to the extent You desire to provide support. You may provide support for free, for a fee, or not at all. Unless required by applicable law or agreed to in writing, You provide Your Contributions on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON- INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+You are not expected to provide support for Your Contributions, except to the extent You desire to provide support. You may provide support for free, for a fee, or not at all. Unless required by applicable law or agreed to in writing, You provide Your Contributions on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
 
 ## Upstream Works
 

@@ -5,12 +5,12 @@
   "homepage": "https://github.com/audiopump/x32-proxy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/audiopump/x32-proxy.git"
+    "url": "git+https://github.com/audiopump/x32-proxy.git"
   },
   "type": "module",
   "main": "index.js",
   "bin": {
-    "x32-proxy": "./index.js"
+    "x32-proxy": "index.js"
   },
   "author": "Brad Isbell <brad@audiopump.co>",
   "license": "BSD-3-Clause",

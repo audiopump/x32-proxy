@@ -6,6 +6,7 @@ import net from 'node:net';
 import packageInfo from './lib/packageInfo.js';
 import UdpServer from './lib/UdpServer.js';
 import WsServer from './lib/WsServer.js';
+import WwwServer from './lib/WwwServer.js';
 
 function formatAddressPort(address, port) {
   if (net.isIPv6(address)) {
@@ -60,14 +61,18 @@ const clients = new Set();
 // List of servers
 const servers = new Set();
 
-for (const type of ['udp', 'ws']) {
+for (const [type, constructor, defaultPort] of [
+  ['udp', UdpServer, argv.targetPort],
+  ['ws', WsServer, 8080],
+  ['www', WwwServer, 80]
+]) {
   for (const host of argv[type] || []) {
     const url = new URL(`fake-protocol://${host || '127.0.0.1'}`);
     servers.add(
-      new (type === 'ws' ? WsServer : UdpServer)({
+      new constructor({
         target: argv.target,
         targetPort: argv.targetPort,
-        port: url.port || (type === 'udp' ? argv.targetPort : 8080),
+        port: url.port || defaultPort,
         address: url.hostname
       })
     );
@@ -90,7 +95,7 @@ for (const server of servers) {
 }
 
 if (!servers.size) {
-  throw new Error('No servers configured.  You must set at least one of --udp or --ws.  See --help for details.');
+  throw new Error('No servers configured.  You must set at least one of --udp, --ws, or --www.  See --help for details.');
 }
 
 output();

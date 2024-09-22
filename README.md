@@ -81,15 +81,21 @@ ws.addEventListener('message', (e) => {
 });
 ```
 
-You may specify `--ws` multiple times to listen on multiple interfaces and/or ports.
+The bind address and port may be shared with the built-in static web server.  You may specify `--ws` multiple times to listen on multiple interfaces and/or ports.
 
-### `--http [bind address[:port]]`
+### `--www [bind address[:port]]`
 
-Start a minimal HTTP server, to host a web application. Will serve files from the current directory. See [serve-static](https://www.npmjs.com/package/serve-static) for details.
+Start a minimal static web server, for convenience in hosting simple client-side web applications. Will serve files from the current working directory by default. See [serve-static](https://www.npmjs.com/package/serve-static) for details.
 
 As with `--udp`, the default bind address is `127.0.0.1`.  Unlike `--udp`, you **may** use `0.0.0.0` or `[::]` to listen on all IPv4 or IPv4/IPv6 interfaces, respectively.
 
 The default port is `80`.
+
+The bind address and port may be shared with the Web Socket server.  You may specify `--www` multiple times to listen on multiple interfaces and/or ports.
+
+### `--www-root <dir>`
+
+Set the document root directory for the static web server.  Defaults to the current working directory.
 
 ### `--help`
 Shows all the options and usage.

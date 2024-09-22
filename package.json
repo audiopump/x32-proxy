@@ -1,6 +1,6 @@
 {
   "name": "x32-proxy",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Proxy server for Behringer X32/Midas M32-series consoles' OSC commands, for VPNs and IPv6 networks",
   "homepage": "https://github.com/audiopump/x32-proxy",
   "repository": {
@@ -14,7 +14,7 @@
   },
   "author": "Brad Isbell <brad@audiopump.co>",
   "license": "BSD-3-Clause",
-  "copyright": "Copyright © 2022 AudioPump, Inc.",
+  "copyright": "Copyright © 2024 AudioPump, Inc.",
   "private": false,
   "dependencies": {
     "console.table": "^0.10.0",

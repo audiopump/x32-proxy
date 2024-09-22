@@ -89,7 +89,7 @@ Start a minimal HTTP server, to host a web application. Will serve files from th
 
 As with `--udp`, the default bind address is `127.0.0.1`.  Unlike `--udp`, you **may** use `0.0.0.0` or `[::]` to listen on all IPv4 or IPv4/IPv6 interfaces, respectively.
 
-The default port is `8088`.
+The default port is `80`.
 
 ### `--help`
 Shows all the options and usage.

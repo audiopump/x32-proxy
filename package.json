@@ -1,6 +1,6 @@
 {
   "name": "x32-proxy",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Proxy server for Behringer X32/Midas M32-series consoles' OSC commands, for VPNs and IPv6 networks",
   "homepage": "https://github.com/audiopump/x32-proxy",
   "repository": {
@@ -20,8 +20,8 @@
     "console.table": "^0.10.0",
     "finalhandler": "^1.3.1",
     "serve-static": "^1.16.2",
-    "ws": "^8.8.1",
-    "yargs": "^17.5.1"
+    "ws": "^8.18.0",
+    "yargs": "^17.7.2"
   },
   "files": [
     "/index.js",

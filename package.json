@@ -26,5 +26,8 @@
   "files": [
     "/index.js",
     "/lib"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.1"
+  }
 }

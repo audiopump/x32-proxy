@@ -141,6 +141,30 @@ x32-proxy --udp --target [2001:0db8::19aa]:5035
 
 Now, on PC2, you can open your software and connect to `127.0.0.1` with X32 Edit as if you were directly connected to the console.
 
+# Docker
+
+This application also works well under Docker, which can be useful for running on appliances like a Synology NAS.
+
+To build the image:
+
+```bash
+docker build -t x32-proxy:latest .
+```
+
+To save the image as a tarball, for sending elsewhere:
+
+```bash
+docker save x32-proxy:latest > x32-proxy-latest.tar
+```
+
+To run it:
+
+```bash
+docker run --network=host -p 10023:10023/udp x32-proxy:latest --udp 203.0.113.10 --target 192.0.2.20
+```
+
+Note that we've specified `host` networking here.  If you plan to use X32 Edit over UDP, you'll need this as X32 Edit (and likely others) depends on the IP address to be set in the reply packets sent from the proxy.  Therefore, the proxy cannot be on some other network... it needs to be connected to the host's network to be accessible.  If you're only using web socket clients, you don't need to worry about this if you forward the right ports.
+
 
 # Security
 It is important to note that the X32/M32 OSC implementation has no security at all.  You urged to only connect trustworthy devices to its network which require full access to the console.  When proxying data from other networks, you must be careful and be absolutely sure you trust every device on that network.  If you enable access to the mixer from the internet, you're probably going to have a bad day.
@@ -150,4 +174,4 @@ See license in LICENSE file.
 
 This project is not associated with Behringer, Midas, MUSIC Group, or any of those folks.  Please do not contact them for support for this tool.
 
-Copyright © 2022 AudioPump, Inc.
+Copyright © 2025 AudioPump, Inc.
